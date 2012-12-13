@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Captche", "yanmoCaptche\Captche.csproj", "{68A0081D-5B79-4FA8-86A2-E49421C768D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLib", "SmartLib\SmartLib.csproj", "{F5150015-2B5A-4AE1-A91D-47FCE4716E83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaptcheIO", "CaptcheIO\CaptcheIO.csproj", "{A69276B3-2A1B-4215-91D8-8C3F1002D525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Http", "Http\Http.csproj", "{2F36FD26-4019-42D1-9D3F-7BF02903D5FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68A0081D-5B79-4FA8-86A2-E49421C768D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A0081D-5B79-4FA8-86A2-E49421C768D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A0081D-5B79-4FA8-86A2-E49421C768D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A0081D-5B79-4FA8-86A2-E49421C768D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5150015-2B5A-4AE1-A91D-47FCE4716E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5150015-2B5A-4AE1-A91D-47FCE4716E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5150015-2B5A-4AE1-A91D-47FCE4716E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5150015-2B5A-4AE1-A91D-47FCE4716E83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69276B3-2A1B-4215-91D8-8C3F1002D525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69276B3-2A1B-4215-91D8-8C3F1002D525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69276B3-2A1B-4215-91D8-8C3F1002D525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69276B3-2A1B-4215-91D8-8C3F1002D525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F36FD26-4019-42D1-9D3F-7BF02903D5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F36FD26-4019-42D1-9D3F-7BF02903D5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F36FD26-4019-42D1-9D3F-7BF02903D5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F36FD26-4019-42D1-9D3F-7BF02903D5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
