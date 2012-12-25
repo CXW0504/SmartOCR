@@ -13,7 +13,7 @@ namespace Captche
         /// </summary>
         /// <param name="img">图像</param>
         /// <returns>灰度化图像</returns>
-        public Bitmap GrayImage(Bitmap img)
+        public Bitmap GrayImage(Bitmap img, int mean)
         {
             for (int y = 0; y < img.Height; y++)
             {
@@ -21,14 +21,65 @@ namespace Captche
                 {
                     Color co = img.GetPixel(x, y);
                     int avg = (co.R + co.G + co.B) / 3;
-                    if (avg > 180) avg = 255;
-                    if (avg <= 180) avg = 0;
+                    if (avg > mean) avg = 255;
+                    if (avg <= mean) avg = 0;
                     img.SetPixel(x, y, Color.FromArgb(avg, avg, avg));
                 }
             }
             return img;
         }
 
+        public Bitmap ClearRedColor(Bitmap img, byte mean)
+        {
+            for (int y = 0; y < img.Height; y++)
+            {
+                for (int x = 0; x < img.Width; x++)
+                {
+                    Color color = img.GetPixel(x, y);
+
+                    if (color.R > mean)
+                    {
+                        img.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    }
+                }
+            }
+            return img;
+        }
+
+        public Bitmap ClearGreenColor(Bitmap img, byte mean)
+        {
+            for (int y = 0; y < img.Height; y++)
+            {
+                for (int x = 0; x < img.Width; x++)
+                {
+                    Color color = img.GetPixel(x, y);
+
+                    if (color.G > mean)
+                    {
+                        img.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    }
+                }
+            }
+            return img;
+        }
+
+        public Bitmap ClearBlueColor(Bitmap img, byte mean)
+        {
+            for (int y = 0; y < img.Height; y++)
+            {
+                for (int x = 0; x < img.Width; x++)
+                {
+                    Color color = img.GetPixel(x, y);
+
+                    if (color.G > mean)
+                    {
+                        img.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    }
+                }
+            }
+            return img;
+        }
+        
         /// <summary>
         /// 清楚背景噪声点
         /// </summary>
@@ -69,7 +120,7 @@ namespace Captche
                             int bottom = (bot_co.R + bot_co.G + bot_co.B) / 3;
                             count += bottom;
                         }
-                        if (count > 255*2) //临近的任意三个点是白色255*3，将当前设置为白色
+                        if (count > 255 * 2) //临近的任意三个点是白色255*3，将当前设置为白色
                         {
                             img.SetPixel(x, y, Color.FromArgb(255, 255, 255));    //设置为白色
                         }

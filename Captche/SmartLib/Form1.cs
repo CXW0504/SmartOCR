@@ -15,10 +15,10 @@ namespace SmartLib
 {
     public partial class Form1 : Form
     {
-        Bitmap img = null;
+        Bitmap img;
         Bitmap[] bit;
         CaptcheData[] captche = new CaptcheData[4];
-                
+
         public Form1()
         {
             InitializeComponent();
@@ -99,32 +99,45 @@ namespace SmartLib
         //下载图像并分割
         private void btnDown_Click(object sender, EventArgs e)
         {
-            Http.Http http = new Http.Http();            
-            picSource.Image = Image.FromFile(http.PostImg(txtUrlImg.Text.Trim()));
+            Http.Http http = new Http.Http();
+            picSource.Image = http.PostImg(txtUrlImg.Text.Trim());
 
             img = new Bitmap(picSource.Image);  //加载图像
 
             if (img != null)
             {
                 YanMoCaptche yanmo = new YanMoCaptche();
-                img = yanmo.GrayImage(img);     //灰度化                
-                img = yanmo.ClearNoise(img);    //去噪
 
-                //Random r = new Random();
-                //img.Save("gray/"+ r.Next(9999).ToString() + ".bmp");
+                
+
+                //去除红色
+                img = yanmo.ClearRedColor(img, 130);
+
+                //去除绿色
+                img = yanmo.ClearGreenColor(img, 150);
+
+                //去除蓝色
+                img = yanmo.ClearBlueColor(img, 200);
+
+                //灰度化
+                img = yanmo.GrayImage(img, 200);
+
+                //去噪
+                img = yanmo.ClearNoise(img);    
+                picSource.Image = img;
+                
+                
+                
+                return;
+
+
+                
 
                 bit = yanmo.InciseImage(img);  //切割
 
-                //for (int i = 0; i < bit.Length; i++)    //冲洗
-                //{
-                //    //bit[i].Save("S" + i.ToString() + ".bmp");
-                //    bit[i] = yanmo.RinseImage(bit[i]);
-                //    //bit[i].Save("H" + i.ToString() + ".bmp");
-                //}
-                
                 for (int i = 0; i < captche.Length; i++)    //填充
                 {
-                    string code = string.Format("{0}",yanmo.CharacterLine(bit[i], false, 4));
+                    string code = string.Format("{0}", yanmo.CharacterLine(bit[i], false, 4));
                     captche[i].Character = code;
                     //captche[i].Character = yanmo.CountBlack(bit[i],0).ToString();
                     captche[i].Bearing = "H";
@@ -180,7 +193,7 @@ namespace SmartLib
                 captche[i].Line = "7";
             }
         }
-        
+
         private void button5_Click(object sender, EventArgs e)
         {
             picSource.Image.Save(string.Format("key/{0}{1}{2}{3}.bmp",
@@ -229,7 +242,7 @@ namespace SmartLib
             open.Reset();
             open.RestoreDirectory = true;
             open.ShowDialog();
-            txtUrlImg.Text = open.FileName;            
+            txtUrlImg.Text = open.FileName;
             if (txtUrlImg.Text.Trim() != string.Empty)
             {
                 try
@@ -239,7 +252,7 @@ namespace SmartLib
                     if (img != null)
                     {
                         YanMoCaptche yanmo = new YanMoCaptche();
-                        img = yanmo.GrayImage(img);     //灰度化
+                        img = yanmo.GrayImage(img, 180);     //灰度化
                         img = yanmo.ClearNoise(img);    //去噪
                         bit = yanmo.InciseImage(img);  //切割
 

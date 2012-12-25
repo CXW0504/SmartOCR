@@ -68,15 +68,15 @@
             this.txtUrlImg.Location = new System.Drawing.Point(47, 6);
             this.txtUrlImg.MaxLength = 100;
             this.txtUrlImg.Name = "txtUrlImg";
-            this.txtUrlImg.Size = new System.Drawing.Size(202, 21);
+            this.txtUrlImg.Size = new System.Drawing.Size(527, 21);
             this.txtUrlImg.TabIndex = 1;
-            this.txtUrlImg.Text = "http://www.yanmo.net/incc/GetCode.asp";
+            this.txtUrlImg.Text = "http://www.miibeian.gov.cn/captcha.jpg";
             // 
             // btnSmart
             // 
-            this.btnSmart.Location = new System.Drawing.Point(255, 138);
+            this.btnSmart.Location = new System.Drawing.Point(501, 314);
             this.btnSmart.Name = "btnSmart";
-            this.btnSmart.Size = new System.Drawing.Size(75, 32);
+            this.btnSmart.Size = new System.Drawing.Size(75, 44);
             this.btnSmart.TabIndex = 7;
             this.btnSmart.Text = "识别图片";
             this.btnSmart.UseVisualStyleBackColor = true;
@@ -84,15 +84,17 @@
             // 
             // picSource
             // 
+            this.picSource.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picSource.Location = new System.Drawing.Point(14, 33);
             this.picSource.Name = "picSource";
-            this.picSource.Size = new System.Drawing.Size(154, 32);
+            this.picSource.Size = new System.Drawing.Size(407, 169);
+            this.picSource.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSource.TabIndex = 3;
             this.picSource.TabStop = false;
             // 
             // pic1
             // 
-            this.pic1.Location = new System.Drawing.Point(14, 75);
+            this.pic1.Location = new System.Drawing.Point(14, 212);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(17, 15);
             this.pic1.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             this.txtp1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtp1.Font = new System.Drawing.Font("宋体", 9F);
-            this.txtp1.Location = new System.Drawing.Point(37, 71);
+            this.txtp1.Location = new System.Drawing.Point(37, 208);
             this.txtp1.MaxLength = 1;
             this.txtp1.Name = "txtp1";
             this.txtp1.Size = new System.Drawing.Size(131, 21);
@@ -112,7 +114,7 @@
             // 
             this.txtp2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtp2.Font = new System.Drawing.Font("宋体", 9F);
-            this.txtp2.Location = new System.Drawing.Point(37, 98);
+            this.txtp2.Location = new System.Drawing.Point(37, 235);
             this.txtp2.MaxLength = 1;
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(131, 21);
@@ -120,7 +122,7 @@
             // 
             // pic2
             // 
-            this.pic2.Location = new System.Drawing.Point(14, 102);
+            this.pic2.Location = new System.Drawing.Point(14, 239);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(17, 15);
             this.pic2.TabIndex = 6;
@@ -130,7 +132,7 @@
             // 
             this.txtp3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtp3.Font = new System.Drawing.Font("宋体", 9F);
-            this.txtp3.Location = new System.Drawing.Point(37, 125);
+            this.txtp3.Location = new System.Drawing.Point(37, 262);
             this.txtp3.MaxLength = 1;
             this.txtp3.Name = "txtp3";
             this.txtp3.Size = new System.Drawing.Size(131, 21);
@@ -138,7 +140,7 @@
             // 
             // pic3
             // 
-            this.pic3.Location = new System.Drawing.Point(14, 129);
+            this.pic3.Location = new System.Drawing.Point(14, 266);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(17, 15);
             this.pic3.TabIndex = 8;
@@ -148,7 +150,7 @@
             // 
             this.txtp4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtp4.Font = new System.Drawing.Font("宋体", 9F);
-            this.txtp4.Location = new System.Drawing.Point(37, 152);
+            this.txtp4.Location = new System.Drawing.Point(37, 289);
             this.txtp4.MaxLength = 1;
             this.txtp4.Name = "txtp4";
             this.txtp4.Size = new System.Drawing.Size(131, 21);
@@ -156,7 +158,7 @@
             // 
             // pic4
             // 
-            this.pic4.Location = new System.Drawing.Point(14, 155);
+            this.pic4.Location = new System.Drawing.Point(14, 292);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(17, 15);
             this.pic4.TabIndex = 10;
@@ -164,9 +166,9 @@
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(255, 98);
+            this.btnDown.Location = new System.Drawing.Point(420, 314);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(75, 34);
+            this.btnDown.Size = new System.Drawing.Size(75, 44);
             this.btnDown.TabIndex = 6;
             this.btnDown.Text = "下载图像";
             this.btnDown.UseVisualStyleBackColor = true;
@@ -174,15 +176,15 @@
             // 
             // rtxState
             // 
-            this.rtxState.Location = new System.Drawing.Point(174, 33);
+            this.rtxState.Location = new System.Drawing.Point(427, 33);
             this.rtxState.Name = "rtxState";
-            this.rtxState.Size = new System.Drawing.Size(75, 137);
+            this.rtxState.Size = new System.Drawing.Size(147, 275);
             this.rtxState.TabIndex = 11;
             this.rtxState.Text = "";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 179);
+            this.button2.Location = new System.Drawing.Point(12, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 44);
             this.button2.TabIndex = 13;
@@ -192,7 +194,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(174, 179);
+            this.button3.Location = new System.Drawing.Point(174, 314);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 44);
             this.button3.TabIndex = 13;
@@ -202,7 +204,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(93, 179);
+            this.button4.Location = new System.Drawing.Point(93, 314);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 44);
             this.button4.TabIndex = 15;
@@ -212,7 +214,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(255, 179);
+            this.button5.Location = new System.Drawing.Point(255, 314);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 44);
             this.button5.TabIndex = 14;
@@ -222,9 +224,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(255, 59);
+            this.button1.Location = new System.Drawing.Point(336, 314);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.Size = new System.Drawing.Size(75, 44);
             this.button1.TabIndex = 16;
             this.button1.Text = "选择";
             this.button1.UseVisualStyleBackColor = true;
@@ -234,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 241);
+            this.ClientSize = new System.Drawing.Size(586, 370);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
